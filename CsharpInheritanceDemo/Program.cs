@@ -7,6 +7,36 @@ namespace CsharpInheritanceDemo
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Console.Read();
         }
+    }
+
+    class Member
+    {
+        protected int annualFee;
+        private string name;
+        private int memberID;
+        private int memberSince;
+
+        public override string ToString()
+        {
+            return "\nName: " + name + "\nMemberId: " + memberID + "\nMemberSince: " + memberSince + "\nTotal Annual Fee: " + annualFee;
+        }
+
+        public Member()
+        {
+            Console.WriteLine("Member is a parent constructor with no parameters");
+        }
+
+        public Member(string pName, int pMemberID, int pMemberSince)
+        {
+            Console.WriteLine("Member is a parent constructor with 3 parameters");
+
+            name = pName;
+            memberSince = pMemberSince;
+            memberID = pMemberID;
+
+        }
+
     }
 }
