@@ -17,7 +17,8 @@ namespace CsharpInheritanceDemo
             Console.WriteLine("Remarks = {0}", remarks);
         }
 
-        public void CalculateAnnualFee()
+        //this keyword overrides the method in the parent class
+        public override void CalculateAnnualFee()
         {
             annualFee = 100 + 12 * 30;
         }
