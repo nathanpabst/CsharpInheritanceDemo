@@ -16,5 +16,11 @@ namespace CsharpInheritanceDemo
             Console.WriteLine("child constructor with 4 parameters.");
             Console.WriteLine("Remarks = {0}", remarks);
         }
+
+        public void CalculateAnnualFee()
+        {
+            annualFee = 100 + 12 * 30;
+        }
+
     }
 }
