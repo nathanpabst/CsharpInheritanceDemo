@@ -7,11 +7,14 @@ namespace CsharpInheritanceDemo
         static void Main(string[] args)
         {
             NormalMember mem1 = new NormalMember("special rate", "Nathan", 42, 2006);
-
+            VIPMember mem2 = new VIPMember("Starshine", 24, 2003);
 
             mem1.CalculateAnnualFee();
+            mem2.CalculateAnnualFee();
 
             Console.WriteLine(mem1.ToString());
+            Console.WriteLine(mem2.ToString());
+
             Console.Read();
         }
     }

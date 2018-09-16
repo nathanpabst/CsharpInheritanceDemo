@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CsharpInheritanceDemo
 {
-    //the NormalMember class is derived from the Member class and inherits the ToString method and two constructors 
+    //the NormalMember class is derived from the Member class and inherits the ToString method, the annualFee field and two constructors 
     class NormalMember : Member
     {
         public NormalMember()
