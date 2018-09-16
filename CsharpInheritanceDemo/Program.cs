@@ -6,7 +6,7 @@ namespace CsharpInheritanceDemo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            NormalMember mem1 = new NormalMember("special rate", "Nathan", 42, 2006);
             Console.Read();
         }
     }
