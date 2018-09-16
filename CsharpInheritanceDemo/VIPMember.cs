@@ -10,11 +10,11 @@ namespace CsharpInheritanceDemo
     {
         public VIPMember(string name, int memberID, int memberSince) : base (name, memberID, memberSince)
         {
-            Console.WriteLine("child constructor with 3 parameters");
+            Console.WriteLine("From VIPMembers.cs line 13: child constructor with 3 parameters");
         }
 
-
-        public void CalculateAnnualFee()
+        //need to override the method in the parent class
+        public override void CalculateAnnualFee()
         {
             annualFee = 1200;
         }

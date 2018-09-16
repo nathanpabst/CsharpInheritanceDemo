@@ -9,12 +9,12 @@ namespace CsharpInheritanceDemo
     {
         public NormalMember()
         {
-            Console.WriteLine("child constructor with no parameter");
+            Console.WriteLine("From NormalMembers.cs line 12: child constructor with no parameter");
         }
         public NormalMember(string remarks, string name, int memberID, int memberSince) : base (name, memberID, memberSince)
         {
-            Console.WriteLine("child constructor with 4 parameters.");
-            Console.WriteLine("Remarks = {0}", remarks);
+            Console.WriteLine("From NormalMembers.cs line 16: child constructor with 4 parameters.");
+            Console.WriteLine("From NormalMembers.cs line 17: Remarks = {0}", remarks);
         }
 
         //this keyword overrides the method in the parent class
