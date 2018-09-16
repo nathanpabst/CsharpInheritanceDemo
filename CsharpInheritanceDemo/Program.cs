@@ -6,14 +6,19 @@ namespace CsharpInheritanceDemo
     {
         static void Main(string[] args)
         {
-            NormalMember mem1 = new NormalMember("special rate", "Nathan", 42, 2006);
-            VIPMember mem2 = new VIPMember("Starshine", 24, 2003);
+            Member[] clubMembers = new Member[5];
 
-            mem1.CalculateAnnualFee();
-            mem2.CalculateAnnualFee();
+            clubMembers[0] = new NormalMember("Special Rate", "Nathan", 42, 2006);
+            clubMembers[1] = new NormalMember("Special Rate", "Pollo El Diablo", 25, 2001);
+            clubMembers[2] = new VIPMember("Starshine", 24, 2006);
+            clubMembers[3] = new VIPMember("Peazy", 14, 2001);
+            clubMembers[4] = new VIPMember("FoxyPop", 56, 2000);
 
-            Console.WriteLine(mem1.ToString());
-            Console.WriteLine(mem2.ToString());
+            foreach (Member m in clubMembers)
+            {
+                m.CalculateAnnualFee();
+                Console.WriteLine(m.ToString());
+            }
 
             Console.Read();
         }
@@ -44,6 +49,12 @@ namespace CsharpInheritanceDemo
             memberSince = pMemberSince;
             memberID = pMemberID;
 
+        }
+
+        //virtual keyword allows this method to be overriden in derived classes
+        public virtual void CalculateAnnualFee()
+        {
+            annualFee = 0;
         }
 
     }
